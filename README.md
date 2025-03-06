@@ -1,4 +1,4 @@
-# From-Tweets-to-Trend-
+# From-Tweets-to-Trend(analyse the impact of social media sentiments on stock price)
 
 <b> Objective </b> 
 This project analyzes the impact of social media sentiments on stock price movements using sentiment analysis and data visualization. By leveraging machine learning techniques and interactive dashboards, the project helps uncover correlations between public sentiment and stock trends. An interactive Tableau dashboard was created to visualize key insights.
