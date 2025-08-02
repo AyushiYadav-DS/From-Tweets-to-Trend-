@@ -1,57 +1,91 @@
-# From-Tweets-to-Trend(analyse the impact of social media sentiments on stock price)
+# 📊 From Tweets to Trend - Analyzing the Impact of Social Media Sentiment on Stock Price Movements
 
-<b> Objective </b> 
-This project analyzes the impact of social media sentiments on stock price movements using sentiment analysis and data visualization. By leveraging machine learning techniques and interactive dashboards, the project helps uncover correlations between public sentiment and stock trends. An interactive Tableau dashboard was created to visualize key insights.
+## 📌 Objective
+This project explores how **social media sentiment influences stock price movements**. By processing tweet sentiment scores and mapping them to stock market data, the project visualizes market behavior through a comprehensive **Tableau dashboard**.
 
-<b> Data Collection & Preprocessing </B>
-Dataset:
-1) Collected stock price data from financial APIs (Yahoo Finance, Alpha Vantage)
-2) Extracted tweets related to stocks using Twitter API & Kaggle datasets
-3) As part of the preprocessing step,
-- Tweet Cleaning: Remove links, hashtags, stopwords 
-- For tweets cleaning  I used NLTK (natural language tool kit)
+## 📥 Data Sources
 
-5) I performed sentiment analysis on tweet data to extract insights about market sentiment.
+  **Stock Price Data**: Yahoo Finance / Alpha Vantage <br>
+  **Tweet Sentiment Data**: Pre-labeled Kaggle datasets with sentiment scores
 
-• Also, calculated the Sentiment Score, This sentiment analysis helped quantify social media sentiment, allowing for a deeper understanding of its impact on stock price movements.<br>
-For this analysis I used TextBlob, a natural language processing (NLP) library.<br>
-TextBlob analyzes the polarity of each tweet, assigning a sentiment score ranging from -1 to +1.<br>
-Based on these scores, tweets were categorized as<br>
 
-1) positive
+## 🧹 Preprocessing (Done in Python)
+**Steps Performed:**
 
-2) neutral
+>> Load and clean tweet data
 
-3) negative
+>> Dropped missing values in tweet text or date fields
 
-<b> Exploratory Data Analysis (EDA) </b>
+>> Convert datetime
 
-1) Stock Price Trends Over Time:
->> Helps track how stock prices change over time.
->> Identifies patterns before and after major sentiment shifts.
+>> Converted created_at to datetime and extracted only date
 
-2) Sentiment Distribution:
->> This shows how many tweets were positive, negative, or neutral.
->> Helps understand market mood.
+>> Assign sentiment labels using textblob
 
-3) Sentiment Score vs. Stock Price Change:
->>  Compares sentiment score with % change in stock price.
->> Identifies correlation between social media sentiment and stock movement.
+>> Based on sentiment_score: Positive, Negative, Neutral
 
-4) Sentiment Impact by Stock:
->> Helps compare different stocks and how much their prices react to sentiment.
->> Identifies which stocks are most affected by social media sentiment
+>> Count tweets by sentiment
 
-5) Volume & Price Movement Comparison
->> Helps determine if high trading volume aligns with sentiment shifts.
->> Shows whether negative sentiment leads to panic selling
+>> Total tweets per sentiment per stock
 
-6) Frequency of stock mention:
->>  Analyzes which stocks are discussed most frequently on social media.
+>> Group by date
 
-7) Candlestick graph:
->> Provides a detailed view of stock price movements (open, high, low, close).
->> Helps traders analyze market trends and price reversals.
+>> Averaged daily sentiment scores
+
+>> Merge datasets <br>
+Combined tweet data with stock prices on the date field  
+
+>> Prepared final data for Tableau visualization
+
+
+## 📊 Tableau Visualizations
+
+An interactive Tableau dashboard was built to show insights and relationships:
+
+### ✅ Visual Components:
+
+1. **Sentiment Distribution**
+
+   >> Bar chart showing count of Positive, Neutral, and Negative tweets
+
+2. **Sentiment vs. Price**
+
+   >> Line chart or scatter plot comparing sentiment levels with stock prices over time
+
+3. **Sentiment vs. Average Stock Movement**
+
+   >> Comparison of average stock change per sentiment category
+
+4. **Sentiment Score vs. Stock Price Change**
+
+   >> Scatter plot showing correlation between tweet sentiment score and stock price shift
+
+5. **Frequency of Stock Mentions**
+
+   >> Bar chart for most mentioned stocks across tweets
+
+6. **Candlestick Chart**
+
+   >> Technical stock visualization (Open, High, Low, Close)
+
+
+
+## 🛠️ Tools Used
+
+| Tool        | Purpose                      |
+| ----------- | ---------------------------- |
+| **Python**  | Data preprocessing & merging |
+| **Pandas**  | Data wrangling               |
+| **Tableau** | Dashboard & Visualization    |
+
+
+
+## 📌 Conclusion
+
+The analysis reveals strong connections between public sentiment and market movement. By tracking what people say about stocks and when, this project shows how sentiment can provide **early signals** for price trends.
+
+
+
 
    
 
