@@ -5,8 +5,7 @@ This project explores how **social media sentiment influences stock price moveme
 
 ## 📥 Data Sources
 
-  **Stock Price Data**: Yahoo Finance / Alpha Vantage <br>
-  **Tweet Sentiment Data**: Pre-labeled Kaggle datasets with sentiment scores
+  **Stock Price Data & Tweet Sentiment Data: Kaggle**
 
 
 ## 🧹 Preprocessing (Done in Python)
